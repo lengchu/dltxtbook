@@ -1,8 +1,8 @@
 # dltxtbook
-download txt book from few website
+从一些阅读网站下载其未提供下载服务的book
 
 
-known website: 
+已知网站: 
 
-  www.yangguiweihuo.com
-  
+www.yangguiweihuo.com
+
