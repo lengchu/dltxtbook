@@ -4,10 +4,11 @@ const gbk   = require('gbk')
 const fs    = require('fs')
 const jf    = require('jsonfile')
 
-const baseurl = 'https://www.ybdu.com/xiaoshuo/22/22760/'
+const baseurl = 'https://www.ybdu.com/xiaoshuo/19/19959/'
 
-// startFromNet()
-mergeFromCache()
+// saveChaptersAsJsonFile(baseurl)  // Step 1
+// startFromNet()                   // Step 2
+// mergeFromCache()                 // Step 3
 
 /**
  * 从网上获取数据，并缓存到文件
@@ -62,7 +63,8 @@ async function readChaptersFromJsonFile() {
 /** 
  * 保存章节到json文件
  */
-async function saveChaptersAsJsonFile(chapters) {
+async function saveChaptersAsJsonFile(url) {
+    let chapters = await getchapters(url)
     let jsondata = []
     for(let i = 0; i < chapters.length; i++)
         jsondata.push({
